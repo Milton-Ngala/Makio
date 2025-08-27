@@ -51,7 +51,7 @@ const About: React.FC = () => {
                   <Users className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-montserrat font-bold text-safari-green">2000+</div>
+                  <div className="text-2xl font-montserrat font-bold text-safari-green">1000+</div>
                   <div className="text-sm font-opensans text-gray-600">Happy Travelers</div>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const About: React.FC = () => {
                   <Award className="h-6 w-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-montserrat font-bold text-safari-green">20+</div>
+                  <div className="text-2xl font-montserrat font-bold text-safari-green">10+</div>
                   <div className="text-sm font-opensans text-gray-600">Safari Packages</div>
                 </div>
               </div>

@@ -77,11 +77,11 @@ const TrustElements: React.FC = () => {
             <div className="text-white font-opensans">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-montserrat font-bold text-sunset-gold mb-2">2000+</div>
+            <div className="text-4xl font-montserrat font-bold text-sunset-gold mb-2">1000+</div>
             <div className="text-white font-opensans">Happy Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-montserrat font-bold text-sunset-gold mb-2">20+</div>
+            <div className="text-4xl font-montserrat font-bold text-sunset-gold mb-2">10+</div>
             <div className="text-white font-opensans">Safari Packages</div>
           </div>
           <div className="text-center">

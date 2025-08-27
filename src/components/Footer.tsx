@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = (props) => {
 
   const openSocialMedia = (platform: string) => {
     const urls = {
-      instagram: 'https://instagram.com/makio-tours_and_travel',
+      instagram: 'https://instagram.com/makio_tours_and_travel',
       facebook: 'https://facebook.com/makiotours',
       tiktok: 'https://www.tiktok.com/@makiotoursandtravel'
     };
@@ -233,7 +233,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             <div>
               <div className="flex items-center justify-center mb-2">
                 <Heart className="h-5 w-5 text-red-500 mr-2" />
-                <span className="text-2xl font-montserrat font-bold text-sunset-gold">2000+</span>
+                <span className="text-2xl font-montserrat font-bold text-sunset-gold">1000+</span>
               </div>
               <p className="font-opensans text-gray-400 text-sm">Happy Travelers</p>
             </div>
@@ -244,7 +244,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             </div>
 
             <div>
-              <div className="text-2xl font-montserrat font-bold text-sunset-gold mb-2">20+</div>
+              <div className="text-2xl font-montserrat font-bold text-sunset-gold mb-2">10+</div>
               <p className="font-opensans text-gray-400 text-sm">Safari Packages</p>
             </div>
           </div>
