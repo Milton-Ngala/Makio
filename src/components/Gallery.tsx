@@ -7,75 +7,18 @@ interface GalleryImage {
   src: string;
   alt: string;
   caption: string;
-  likes: number;
-  comments: number;
 }
 
 const galleryImages: GalleryImage[] = [
-  {
-    id: 1,
-    src: "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Lions in Maasai Mara",
-    caption: "Majestic lions at sunset in Maasai Mara 🦁",
-    likes: 245,
-    comments: 18
-  },
-  {
-    id: 2,
-    src: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751568270/Amboseli_Tsavo_Adventure_dlom5b.jpg",
-    alt: "Elephants in Amboseli",
-    caption: "Elephant family with Mt. Kilimanjaro backdrop 🐘",
-    likes: 312,
-    comments: 24
-  },
-  {
-    id: 3,
-    src: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Flamingos at Lake Nakuru",
-    caption: "Pink paradise at Lake Nakuru 🦩",
-    likes: 189,
-    comments: 12
-  },
-  {
-    id: 4,
-    src: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Cheetah running",
-    caption: "Speed and grace in the savannah 🐆",
-    likes: 178,
-    comments: 15
-  },
-  {
-    id: 5,
-    src: "https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Giraffe family",
-    caption: "Gentle giants of the African plains 🦒",
-    likes: 267,
-    comments: 21
-  },
-  {
-    id: 6,
-    src: "https://images.pexels.com/photos/2356059/pexels-photo-2356059.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Safari sunset",
-    caption: "Golden hour magic in the wilderness ✨",
-    likes: 298,
-    comments: 31
-  },
-  {
-    id: 7,
-    src: "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Zebra herd",
-    caption: "Stripes across the savannah 🦓",
-    likes: 156,
-    comments: 9
-  },
-  {
-    id: 8,
-    src: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Rhino at sunset",
-    caption: "Conservation heroes in their natural habitat 🦏",
-    likes: 234,
-    comments: 28
-  }
+  { id: 1, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030209/Makio_56_hyiezn.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 100, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030205/Makio_50_eg6ctn.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 101, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030204/Makio_53_e4fbrz.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 102, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030196/Makio_41_tsqobz.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 103, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030188/Makio_31_ahnn6v.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 104, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030192/Makio_32_zf7qer.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 105, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030157/Makio_1_r3q6iy.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 106, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030161/Makio_2_equhip.jpg", alt: "Safari Life", caption: "Safari Life"},
+  { id: 107, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030201/Makio_43_k5pqeb.jpg", alt: "Safari Life", caption: "Safari Life"},
 ];
 
 const Gallery: React.FC = () => {
@@ -132,7 +75,7 @@ const Gallery: React.FC = () => {
               
               <div className="p-4">
                 <p className="font-opensans text-gray-700 mb-3">{image.caption}</p>
-                <div className="flex items-center space-x-4 text-gray-500">
+                {/* <div className="flex items-center space-x-4 text-gray-500">
                   <div className="flex items-center">
                     <Heart className="h-4 w-4 mr-1 text-red-500" />
                     <span className="font-opensans text-sm">{image.likes}</span>
@@ -141,7 +84,7 @@ const Gallery: React.FC = () => {
                     <MessageCircle className="h-4 w-4 mr-1" />
                     <span className="font-opensans text-sm">{image.comments}</span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}
@@ -181,7 +124,7 @@ const Gallery: React.FC = () => {
             />
             <div className="p-6">
               <p className="font-opensans text-gray-700 mb-3">{selectedImage.caption}</p>
-              <div className="flex items-center space-x-4 text-gray-500">
+              {/* <div className="flex items-center space-x-4 text-gray-500">
                 <div className="flex items-center">
                   <Heart className="h-4 w-4 mr-1 text-red-500" />
                   <span className="font-opensans text-sm">{selectedImage.likes}</span>
@@ -190,7 +133,7 @@ const Gallery: React.FC = () => {
                   <MessageCircle className="h-4 w-4 mr-1" />
                   <span className="font-opensans text-sm">{selectedImage.comments}</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

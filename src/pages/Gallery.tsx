@@ -7,147 +7,156 @@ interface GalleryImage {
   src: string;
   alt: string;
   caption: string;
-  likes: number;
-  comments: number;
   location: string;
   category: string;
-}
+};
 
 const galleryImages: GalleryImage[] = [
-  {
-    id: 1,
-    src: "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Lions in Maasai Mara",
-    caption: "Majestic lions at sunset in Maasai Mara 🦁",
-    likes: 245,
-    comments: 18,
-    location: "Maasai Mara",
-    category: "Wildlife"
-  },
-  {
-    id: 2,
-    src: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751568270/Amboseli_Tsavo_Adventure_dlom5b.jpg",
-    alt: "Elephants in Amboseli",
-    caption: "Elephant family with Mt. Kilimanjaro backdrop 🐘",
-    likes: 312,
-    comments: 24,
-    location: "Amboseli",
-    category: "Wildlife"
-  },
-  {
-    id: 3,
-    src: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Flamingos at Lake Nakuru",
-    caption: "Pink paradise at Lake Nakuru 🦩",
-    likes: 189,
-    comments: 12,
-    location: "Lake Nakuru",
-    category: "Birds"
-  },
-  {
-    id: 4,
-    src: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Cheetah running",
-    caption: "Speed and grace in the savannah 🐆",
-    likes: 178,
-    comments: 15,
-    location: "Maasai Mara",
-    category: "Wildlife"
-  },
-  {
-    id: 5,
-    src: "https://images.pexels.com/photos/3608263/pexels-photo-3608263.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Giraffe family",
-    caption: "Gentle giants of the African plains 🦒",
-    likes: 267,
-    comments: 21,
-    location: "Nairobi National Park",
-    category: "Wildlife"
-  },
-  {
-    id: 6,
-    src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030185/Makio_29_rnbgiq.jpg",
-    alt: "Safari sunset",
-    caption: "Golden hour magic in the wilderness ✨",
-    likes: 298,
-    comments: 31,
-    location: "Tsavo",
-    category: "Landscapes"
-  },
-  {
-    id: 7,
-    src: "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Zebra herd",
-    caption: "Stripes across the savannah 🦓",
-    likes: 156,
-    comments: 9,
-    location: "Maasai Mara",
-    category: "Wildlife"
-  },
-  {
-    id: 8,
-    src: "https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Rhino at sunset",
-    caption: "Conservation heroes in their natural habitat 🦏",
-    likes: 234,
-    comments: 28,
-    location: "Lake Nakuru",
-    category: "Wildlife"
-  },
-  {
-    id: 9,
-    src: "https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Maasai warrior",
-    caption: "Traditional Maasai culture and heritage 🏹",
-    likes: 201,
-    comments: 16,
-    location: "Maasai Mara",
-    category: "Culture"
-  },
-  {
-    id: 10,
-    src: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751641666/Makio_Tour_Vehicle_pfj1hq.png",
-    alt: "Safari vehicle",
-    caption: "Ready for adventure in our 4WD safari vehicles 🚗",
-    likes: 143,
-    comments: 8,
-    location: "Various",
-    category: "Safari Life"
-  },
-  {
-    id: 11,
-    src: "https://images.pexels.com/photos/1670732/pexels-photo-1670732.jpeg?auto=compress&cs=tinysrgb&w=400",
-    alt: "Hippos in water",
-    caption: "Hippos enjoying the cool waters 🦛",
-    likes: 187,
-    comments: 13,
-    location: "Lake Naivasha",
-    category: "Wildlife"
-  },
-  {
-    id: 12,
-    src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030192/Makio_36_fzz571.jpg",
-    alt: "Acacia tree silhouette",
-    caption: "Iconic African acacia at dawn 🌅",
-    likes: 276,
-    comments: 19,
-    location: "Amboseli",
-    category: "Landscapes"
-  },
-    
-  {
-    id: 13,
-    src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756031299/Accommodation_-_Samburu_Sopa_Lodge_muluwp.jpg",
-    alt: "Acacia tree silhouette",
-    caption: "Samburu Sopa Lodge",
-    likes: 276,
-    comments: 19,
-    location: "Samburu",
-    category: "Accommodation"
-  }
+  // --- Accommodation: Diani Sea Resort ---
+  { id: 1, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316760/Diani_4_pxb5ck.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 2, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316759/Diani_3_ggmzsn.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 3, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316756/Diani_10_vynnxp.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 4, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316755/Diani_9_kcnhvt.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 5, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316754/Diani_2_j0quj8.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 6, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316754/Diani_7_q540ee.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 7, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316753/Diani_8_y7trif.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 8, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316753/Diani_1_m6c66l.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 9, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316752/Diani_5_y5rq9b.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+  { id: 10, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316752/Diani_6_gazxny.jpg", alt: "Diani Sea Resort", caption: "Diani Sea Resort", location: "South Coast of Kenya", category: "Accommodation" },
+
+  // --- Accommodation: Kibo Safari Lodge ---
+  { id: 11, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316835/Kibo_12_g47vhe.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 12, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316831/Kibo_9_ikoiim.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 13, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316829/Kibo_11_x62m1f.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 14, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316829/Kibo_6_vvqafi.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 15, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316828/Kibo_10_cbxu7x.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 16, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316827/Kibo_7_wyh5bq.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 17, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316827/Kibo_8_uuavpc.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 18, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316827/Kibo_2_uig5nh.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 19, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316827/Kibo_3_whltme.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 20, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316826/Kibo_5_bzrmzm.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 21, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316825/Kibo_1_ceqnfb.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+  { id: 22, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316825/Kibo_4_lwfhsh.jpg", alt: "Kibo Safari Lodge", caption: "Kibo Safari Lodge", location: "Amboseli, Kenya", category: "Accommodation" },
+
+  // --- Accommodation: Kilaguni Serena Safari Lodge ---
+  { id: 23, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316890/Kilaguni_4_k5unpg.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 24, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316890/Kilaguni_8_aznxrf.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 25, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316889/Kilaguni_9_zvdmpg.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 26, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316889/Kilaguni_7_xpo6mu.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 27, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316888/Kilaguni_5_aq7i9l.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 28, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316887/Kilaguni_6_zo9bwm.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 29, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316886/Kilaguni_2_a637ly.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 30, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316885/Kilaguni_3_gmzze4.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+  { id: 31, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316885/Kilaguni_1_ixkmtp.jpg", alt: "Kilaguni Serena Safari Lodge", caption: "Kilaguni Serena Safari Lodge", location: "Tsavo West, Kenya", category: "Accommodation" },
+
+  // --- Accommodation: Mara Serena Safari Lodge ---
+  { id: 32, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316989/Serena_18_lgsial.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 33, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316988/Serena_12_srivag.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 34, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316986/Serena_16_tbvjnl.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 35, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316986/Serena_17_xfcgap.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 36, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316985/Serena_11_quudaw.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 37, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316984/Serena_6_slq9kx.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 38, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316983/Serena_14_iweucm.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 39, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316983/Serena_13_ipvyoc.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 40, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316982/Serena_15_t1fput.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 41, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316980/Serena_7_ger29m.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 42, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316979/Serena_10_jpubpn.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 43, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316977/Serena_9_ebj8bh.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 44, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316976/Serena_3_h2vpo8.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 45, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316975/Serena_8_y2irkf.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 46, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316973/Serena_2_kxkbib.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 47, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316973/Serena_1_tfogi2.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 48, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316972/Serena_4_hope1v.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+  { id: 49, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756316972/Serena_5_ei2euf.jpg", alt: "Mara Serena Safari Lodge", caption: "Mara Serena Safari Lodge", location: "Maasai Mara Game Reserve, Kenya", category: "Accommodation" },
+
+  // --- Accommodation: Mbweha Camp ---
+  { id: 50, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317051/Mbweha_7_zb89mq.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 51, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317051/Mbweha_4_lxhuuh.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 52, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317049/Mbweha_6_byva6l.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 53, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317046/Mbweha_3_iayrsz.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 54, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317046/Mbweha_2_wcfmv8.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 55, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317045/Mbweha_5_ejwzzx.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+  { id: 56, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317042/Mbweha_1_dtcgt2.jpg", alt: "Mbweha Camp", caption: "Mbweha Camp", location: "Lake Nakuru, Kenya", category: "Accommodation" },
+
+  // --- Accommodation: Oseki Maasai Mara Camp ---
+  { id: 57, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317108/Oseki_10_wjuvip.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 58, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317103/Oseki_9_m0hg4h.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 59, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317102/Oseki_8_tdxqg7.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 60, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317101/Oseki_7_jaixpa.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 61, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317100/Oseki_6_wlkhwv.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 62, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317097/Oseki_5_aitmby.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 63, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317096/Oseki_4_azvk1i.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 64, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317095/Oseki_2_vuciu9.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 65, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317095/Oseki_3_jbzdv5.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+  { id: 66, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317094/Oseki_1_ypo8ae.jpg", alt: "Oseki Maasai Mara Camp", caption: "Oseki Maasai Mara Camp", location: "Narok, Kenya", category: "Accommodation" },
+
+  // --- Beach ---
+  { id: 67, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317276/Beach_13_ifqyrv.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 68, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317258/Beach_11_aegkyo.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 69, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317258/Beach_12_novc8u.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 70, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317254/Beach_10_ykcyzg.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 71, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317252/Beach_9_ga58xy.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 72, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317250/Beach_7_rraypu.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 73, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317249/Beach_8_alwuix.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 74, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317245/Beach_6_yisims.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 75, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317243/Beach_5_u9qiek.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 76, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317242/Beach_3_er00il.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 77, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317241/Beach_4_gfdrzy.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 78, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317239/Beach_2_riqp2y.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+  { id: 79, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317238/Beach_1_afhavo.jpg", alt: "Beach", caption: "Beach", location: "Kenya Coast", category: "Beach" },
+
+  // --- Culture ---
+  { id: 80, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317365/Culture_9_h5sbro.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 81, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317360/Culture_10_yipolh.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 82, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317359/Culture_8_ttqujk.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 83, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317357/Culture_1_mawds0.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 84, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317356/Culture_11_o4dfzn.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 85, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317354/Culture_4_fk9yia.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 86, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317352/Culture_7_r0yc3e.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 87, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317350/Culture_3_wkwegf.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 88, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317349/Culture_6_zf8ub7.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 89, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317343/Culture_2_oammxe.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+  { id: 90, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317342/Culture_5_xcexq1.jpg", alt: "Culture", caption: "Culture", location: "Kenya", category: "Culture" },
+
+  // --- Landscapes ---
+  { id: 91, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030421/Makio_142_fpzaxc.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 92, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030418/Makio_138_l70ciq.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 93, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030387/Makio_129_ms9bpf.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 94, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030383/Makio_125_y2aicm.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 95, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030346/Makio_117_a80fs2.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 96, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030333/Makio_103_wzersl.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+  { id: 97, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030243/Makio_67_owwjgf.jpg", alt: "Landscapes", caption: "Landscapes", location: "Kenya", category: "Landscapes" },
+
+  // --- Birds ---
+  { id: 98, src: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751569195/Lake_Nakuru_Naivasha_trekvq.jpg", alt: "Birds", caption: "Birds", location: "Kenya", category: "Birds" },
+
+
+
+  // --- Safari Life ---
+  { id: 99, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030209/Makio_56_hyiezn.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 100, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030205/Makio_50_eg6ctn.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 101, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030204/Makio_53_e4fbrz.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 102, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030196/Makio_41_tsqobz.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 103, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030188/Makio_31_ahnn6v.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 104, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030192/Makio_32_zf7qer.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 105, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030157/Makio_1_r3q6iy.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 106, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030161/Makio_2_equhip.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 107, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030201/Makio_43_k5pqeb.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 108, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030197/Makio_27_gl2xmh.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+  { id: 109, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030191/Makio_33_vwqxhy.jpg", alt: "Safari Life", caption: "Safari Life", location: "Kenya", category: "Safari Life" },
+ 
+  // --- Wildlife ---
+  { id: 110, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030213/Makio_55_zcuspb.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 111, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030206/Makio_52_ojhdvh.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 112, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030194/Makio_39_s3nkge.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 113, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030191/Makio_33_vwqxhy.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 114, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030190/Makio_28_xcdgjd.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 115, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030184/Makio_26_xlsj7b.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
+  { id: 116, src: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030238/Makio_59_oqamqs.jpg", alt: "Wildlife", caption: "Wildlife", location: "Kenya", category: "Wildlife" },
 ];
 
-const categories = ["All", "Wildlife", "Landscapes", "Accommodation", "Birds", "Culture", "Safari Life"];
+
+const categories = ["All", "Wildlife", "Beach", "Landscapes", "Accommodation", "Birds", "Culture", "Safari Life"];
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
@@ -158,7 +167,7 @@ const Gallery: React.FC = () => {
     : galleryImages.filter(img => img.category === selectedCategory);
 
   const openInstagram = () => {
-    window.open('https://instagram.com/makio-tours_and_travel', '_blank');
+    window.open('https://www.instagram.com/makio_tours_and_travel', '_blank');
   };
 
   return (
@@ -218,7 +227,7 @@ const Gallery: React.FC = () => {
               <div className="font-opensans text-gray-600">Photos Captured</div>
             </div>
             <div>
-              <div className="text-3xl font-montserrat font-bold text-safari-green mb-2">20+</div>
+              <div className="text-3xl font-montserrat font-bold text-safari-green mb-2">10+</div>
               <div className="font-opensans text-gray-600">Locations Visited</div>
             </div>
             <div>
@@ -263,14 +272,14 @@ const Gallery: React.FC = () => {
                   </div>
                   <p className="font-opensans text-gray-700 mb-3">{image.caption}</p>
                   <div className="flex items-center space-x-4 text-gray-500">
-                    <div className="flex items-center">
+                    {/* <div className="flex items-center">
                       <Heart className="h-4 w-4 mr-1 text-red-500" />
                       <span className="font-opensans text-sm">{image.likes}</span>
                     </div>
                     <div className="flex items-center">
                       <MessageCircle className="h-4 w-4 mr-1" />
                       <span className="font-opensans text-sm">{image.comments}</span>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -328,7 +337,7 @@ const Gallery: React.FC = () => {
                 </button>
               </div>
               <p className="font-opensans text-gray-700 mb-4">{selectedImage.caption}</p>
-              <div className="flex items-center space-x-6 text-gray-500">
+              {/* <div className="flex items-center space-x-6 text-gray-500">
                 <div className="flex items-center">
                   <Heart className="h-5 w-5 mr-2 text-red-500" />
                   <span className="font-opensans">{selectedImage.likes} likes</span>
@@ -337,7 +346,7 @@ const Gallery: React.FC = () => {
                   <MessageCircle className="h-5 w-5 mr-2" />
                   <span className="font-opensans">{selectedImage.comments} comments</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

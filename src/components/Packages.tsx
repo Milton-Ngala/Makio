@@ -15,10 +15,10 @@ interface Package {
 
 const packages: Package[] = [
  {
-    id: 0,
+    id: 1,
     title: "Day Trip - Nairobi National Park",
     duration: "1 Day",
-    image: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751568675/Nairobi_National_Park_xlsiu3.jpg",
+    image: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030184/Makio_21_ytes0p.jpg",
     highlights: ["Black Rhinos", "City Skyline Backdrop", "Big Cats"],
     price: "",
     rating: 4.6,
@@ -26,7 +26,7 @@ const packages: Package[] = [
     description: "Convenient safari in Nairobi National Park with lions, giraffes, rhinos & more."
   },
   {
-    id: 1,
+    id: 2,
     title: "Day Trip - Amboseli National Park",
     duration: "1 Day",
     image: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751568270/Amboseli_Tsavo_Adventure_dlom5b.jpg",
@@ -37,7 +37,7 @@ const packages: Package[] = [
     description: "Day safari to Amboseli with spectacular views of Mount Kilimanjaro and large elephant herds."
   },
   {
-    id: 2,
+    id: 3,
     title: "Day Trip - Lake Nakuru & Naivasha",
     duration: "1 Day",
     image: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751569195/Lake_Nakuru_Naivasha_trekvq.jpg",
@@ -48,10 +48,10 @@ const packages: Package[] = [
     description: "Flamingos, white rhinos & a boat safari on Lake Naivasha with Crescent Island walk."
   },
   {
-    id: 3,
+    id: 4,
     title: "Day Trip - Hell’s Gate & Lake Naivasha",
     duration: "1 Day",
-    image: "https://res.cloudinary.com/dqokf2vgg/image/upload/v1751569195/Hells_Gate_Naivasha_cj3ifb.jpg",
+    image: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756317046/Mbweha_2_wcfmv8.jpg",
     highlights: ["Cycling Safari", "Gorges", "Boat Safari"],
     price: "",
     rating: 4.6,
