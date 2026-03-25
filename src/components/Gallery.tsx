@@ -52,7 +52,7 @@ const Gallery: React.FC = () => {
         </div>
 
         {/* Masonry Gallery */}
-        <div className="columns-1 md:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {galleryImages.map((image) => (
             <div 
               key={image.id}
@@ -63,7 +63,7 @@ const Gallery: React.FC = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-auto object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
