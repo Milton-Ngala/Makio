@@ -266,15 +266,15 @@ const Footer: React.FC<FooterProps> = (props) => {
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-end space-x-6 text-sm">
-              <a href="#" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
+              <Link to="/privacy-policy" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
                 Privacy Policy
-              </a>
-              <a href="#" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
+              </Link>
+              <Link to="/terms-of-service" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
                 Terms of Service
-              </a>
-              <a href="#" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
+              </Link>
+              <Link to="/cookie-policy" className="font-opensans text-gray-400 hover:text-sunset-gold transition-colors">
                 Cookie Policy
-              </a>
+              </Link>
             </div>
           </div>
         </div>
