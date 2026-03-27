@@ -1,7 +1,12 @@
 import React from 'react';
 import { Award, Users, Heart, Shield, Globe, Camera, Leaf } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 const About: React.FC = () => {
+  useSEO({
+    title: 'About Us',
+    description: 'Learn about Makio Tours and Travel — our story, mission, values, and commitment to sustainable safari experiences in Kenya.',
+  });
   return (
     <div className="pt-16">
       {/* Hero Section */}

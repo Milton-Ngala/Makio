@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { InstagramOutlined } from '@ant-design/icons';
 import LazyImage from './LazyImage';
+import AnimatedSection from './AnimatedSection';
+import { optimizeImage } from '../utils/cloudinary';
 
 interface GalleryImage {
   id: number;
@@ -33,7 +35,7 @@ const Gallery: React.FC = () => {
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-gray-900 mb-6">
             Safari <span className="text-safari-green">Gallery</span>
           </h2>
@@ -50,7 +52,7 @@ const Gallery: React.FC = () => {
             Follow us now
             <ExternalLink className="ml-2 h-4 w-4 group-hover:scale-110 transition-transform" />
           </button>
-        </div>
+        </AnimatedSection>
 
         {/* Masonry Gallery */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -62,7 +64,7 @@ const Gallery: React.FC = () => {
             >
               <div className="relative">
                 <LazyImage
-                  src={image.src}
+                  src={optimizeImage(image.src, 600)}
                   alt={image.alt}
                   className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
                   wrapperClassName="h-56"

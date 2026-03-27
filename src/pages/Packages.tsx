@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Clock, Star, MapPin, ArrowRight, Users, Check, X } from 'lucide-react';
+import { useSEO } from '../hooks/useSEO';
 
 interface Package {
   id: number;
@@ -410,8 +411,19 @@ const packages: Package[] = [
   }
 ];
 
+const locations = ['All', ...Array.from(new Set(packages.map(p => p.location)))];
+
 const Packages: React.FC = () => {
+  useSEO({
+    title: 'Safari Packages',
+    description: 'Explore Makio Tours safari packages — from day trips to multi-day adventures across Maasai Mara, Amboseli, Tsavo, and more.',
+  });
   const [selectedPackage, setSelectedPackage] = useState<Package | null>(null);
+  const [activeLocation, setActiveLocation] = useState('All');
+
+  const filtered = activeLocation === 'All'
+    ? packages
+    : packages.filter(p => p.location === activeLocation);
 
   const handleBookNow = (packageTitle: string) => {
     const message = `Hi! I'm interested in booking the ${packageTitle} package. Could you please provide more details?`;
@@ -439,8 +451,26 @@ const Packages: React.FC = () => {
       {/* Packages Grid */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Location Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {locations.map(loc => (
+              <button
+                key={loc}
+                onClick={() => setActiveLocation(loc)}
+                className={`px-5 py-2 rounded-full font-opensans font-semibold transition-all duration-300 ${
+                  activeLocation === loc
+                    ? 'bg-safari-green text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                }`}
+              >
+                {loc}
+              </button>
+            ))}
+          </div>
+
           <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {packages.map((pkg) => (
+            {filtered.map((pkg) => (
               <div 
                 key={pkg.id}
                 className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 group relative ${

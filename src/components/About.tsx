@@ -1,5 +1,7 @@
 import React from 'react';
 import { Award, Users, Heart } from 'lucide-react';
+import AnimatedSection from './AnimatedSection';
+import { optimizeImage } from '../utils/cloudinary';
 
 const About: React.FC = () => {
   return (
@@ -7,25 +9,27 @@ const About: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Image Side */}
-          <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-xl">
-              <img
-                src="https://res.cloudinary.com/drnm7slkt/image/upload/v1756030199/Makio_45_wyjq1v.jpg"
-                alt="Safari guide with wildlife"
-                className="w-full h-96 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="absolute -bottom-6 -right-6 bg-safari-green text-white p-6 rounded-2xl shadow-lg">
-              <div className="text-center">
-                <div className="text-3xl font-montserrat font-bold">5+</div>
-                <div className="text-sm font-opensans">Years Experience</div>
+          <AnimatedSection direction="left">
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
+                <img
+                  src={optimizeImage("https://res.cloudinary.com/drnm7slkt/image/upload/v1756030199/Makio_45_wyjq1v.jpg", 800)}
+                  alt="Safari guide with wildlife"
+                  className="w-full h-96 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute -bottom-6 -right-6 bg-safari-green text-white p-6 rounded-2xl shadow-lg">
+                <div className="text-center">
+                  <div className="text-3xl font-montserrat font-bold">5+</div>
+                  <div className="text-sm font-opensans">Years Experience</div>
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
 
           {/* Content Side */}
-          <div className="animate-slide-in-left">
+          <AnimatedSection direction="right" delay={0.15}>
             <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-gray-900 mb-6">
               About <span className="text-safari-green">Makio Tours</span>
             </h2>
@@ -71,7 +75,7 @@ const About: React.FC = () => {
               Learn More About Us
               <Heart className="ml-2 h-5 w-5 group-hover:scale-110 transition-transform" />
             </button>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

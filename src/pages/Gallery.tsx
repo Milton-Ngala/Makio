@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ExternalLink, Camera, MapPin, ChevronLeft, ChevronRight } from 'lucide-react';
 import { InstagramOutlined } from '@ant-design/icons';
+import { useSEO } from '../hooks/useSEO';
 
 const IMAGES_PER_PAGE = 12;
 
@@ -147,6 +148,10 @@ const galleryImages: GalleryImage[] = [
 const categories = ["All", "Wildlife", "Beach", "Landscapes", "Accommodation", "Birds", "Culture", "Safari Life"];
 
 const Gallery: React.FC = () => {
+  useSEO({
+    title: 'Safari Gallery',
+    description: 'Browse stunning photos from Makio Tours safaris — wildlife, landscapes, beaches, culture, and accommodation across Kenya.',
+  });
   const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [currentPage, setCurrentPage] = useState(1);
@@ -237,7 +242,7 @@ const Gallery: React.FC = () => {
               <div className="font-opensans text-gray-600">Years Experience</div>
             </div>
             <div>
-              <div className="text-3xl font-montserrat font-bold text-safari-green mb-1">10K+</div>
+              <div className="text-3xl font-montserrat font-bold text-safari-green mb-1">3.9K+</div>
               <div className="font-opensans text-gray-600">Instagram Followers</div>
             </div>
           </div>

@@ -3,8 +3,13 @@ import Booking from '../components/Booking';
 import Testimonials from '../components/Testimonials';
 import { Phone, Mail } from 'lucide-react';
 import { InstagramOutlined, WhatsAppOutlined } from '@ant-design/icons';
+import { useSEO } from '../hooks/useSEO';
 
 const Contact: React.FC = () => {
+  useSEO({
+    title: 'Contact Us',
+    description: 'Get in touch with Makio Tours and Travel. Book your safari via WhatsApp, email, or our contact form.',
+  });
   const openWhatsApp = () => {
     window.open('https://wa.me/254774156869', '_blank');
   };

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Clock, Star, ArrowRight, Users } from 'lucide-react';
 import LazyImage from './LazyImage';
+import AnimatedSection from './AnimatedSection';
+import { optimizeImage } from '../utils/cloudinary';
 
 interface Package {
   id: number;
@@ -72,7 +74,7 @@ const Packages: React.FC = () => {
     <section id="packages" className="py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-montserrat font-bold text-gray-900 mb-6">
             Safari <span className="text-safari-green">Packages</span>
           </h2>
@@ -80,19 +82,19 @@ const Packages: React.FC = () => {
             Choose from our carefully curated safari experiences, each designed to showcase 
             Africa's incredible wildlife and landscapes.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Packages Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
-          {packages.map((pkg) => (
+          {packages.map((pkg, index) => (
+            <AnimatedSection key={pkg.id} delay={index * 0.05}>
             <div 
-              key={pkg.id}
               className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:scale-105 group"
             >
               {/* Image */}
               <div className="relative overflow-hidden">
                 <LazyImage
-                  src={pkg.image}
+                  src={optimizeImage(pkg.image, 800)}
                   alt={pkg.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                   wrapperClassName="h-64"
@@ -154,6 +156,7 @@ const Packages: React.FC = () => {
                 </div>
               </div>
             </div>
+            </AnimatedSection>
           ))}
         </div>
 
