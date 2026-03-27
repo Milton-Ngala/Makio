@@ -7,12 +7,16 @@ import Packages from './pages/Packages';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import FloatingActionButton from './components/FloatingActionButton';
+import ScrollToTop from './components/ScrollToTop';
+import PageLoader from './components/PageLoader';
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-white">
+        <PageLoader />
         <Header />
+        <ScrollToTop />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

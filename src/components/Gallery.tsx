@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { ExternalLink, Heart, MessageCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { InstagramOutlined } from '@ant-design/icons';
+import LazyImage from './LazyImage';
 
 interface GalleryImage {
   id: number;
@@ -60,11 +61,11 @@ const Gallery: React.FC = () => {
               onClick={() => setSelectedImage(image)}
             >
               <div className="relative">
-                <img
+                <LazyImage
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  wrapperClassName="h-56"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -117,7 +118,7 @@ const Gallery: React.FC = () => {
           onClick={() => setSelectedImage(null)}
         >
           <div className="bg-white rounded-2xl max-w-4xl max-h-full overflow-auto">
-            <img
+            <LazyImage
               src={selectedImage.src}
               alt={selectedImage.alt}
               className="w-full h-auto object-cover"

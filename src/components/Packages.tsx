@@ -1,5 +1,6 @@
 import React from 'react';
 import { Clock, Star, ArrowRight, Users } from 'lucide-react';
+import LazyImage from './LazyImage';
 
 interface Package {
   id: number;
@@ -90,11 +91,11 @@ const Packages: React.FC = () => {
             >
               {/* Image */}
               <div className="relative overflow-hidden">
-                <img
+                <LazyImage
                   src={pkg.image}
                   alt={pkg.title}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
-                  loading="lazy"
+                  wrapperClassName="h-64"
                 />
                 <div className="absolute top-4 left-4 bg-safari-green text-white px-3 py-1 rounded-full text-sm font-opensans font-semibold">
                   {pkg.location}
