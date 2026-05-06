@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import { WhatsAppOutlined } from '@ant-design/icons';
 
 interface BookingForm {
   name: string;
@@ -10,6 +11,17 @@ interface BookingForm {
   endDate: string;
   guests: number;
   specialRequests: string;
+}
+
+interface BookingErrors {
+  name?: string;
+  email?: string;
+  phone?: string;
+  packageType?: string;
+  startDate?: string;
+  endDate?: string;
+  guests?: string;
+  specialRequests?: string;
 }
 
 const Booking: React.FC = () => {
@@ -26,7 +38,7 @@ const Booking: React.FC = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errors, setErrors] = useState<Partial<BookingForm>>({});
+  const [errors, setErrors] = useState<BookingErrors>({});
 
   const packages = [
     'Maasai Mara Classic Safari',
@@ -37,7 +49,7 @@ const Booking: React.FC = () => {
   ];
 
   const validateForm = (): boolean => {
-    const newErrors: Partial<BookingForm> = {};
+    const newErrors: BookingErrors = {};
 
     if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
@@ -78,7 +90,7 @@ const Booking: React.FC = () => {
     }));
     
     // Clear error when user starts typing
-    if (errors[name as keyof BookingForm]) {
+    if (errors[name as keyof BookingErrors]) {
       setErrors(prev => ({
         ...prev,
         [name]: undefined
@@ -439,7 +451,7 @@ Please send me more information about this package and the booking process.
                       <span className="font-opensans">info@makiotours.com</span>
                     </div>
                     <div className="flex items-center">
-                      <MessageSquare className="h-5 w-5 mr-3 text-sunset-gold" />
+                      <WhatsAppOutlined className="h-5 w-5 mr-3 text-sunset-gold" style={{fontSize: "20px"}}/>
                       <span className="font-opensans">WhatsApp Available</span>
                     </div>
                   </div>

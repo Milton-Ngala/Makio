@@ -217,40 +217,7 @@ const Footer: React.FC<FooterProps> = (props) => {
           </div>
         </div>
       </div>
-
-      {/* Trust Indicators */}
-      <div className="border-t border-gray-800 py-8">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="flex items-center justify-center mb-2">
-                <Star className="h-5 w-5 text-yellow-400 mr-2" />
-                <span className="text-2xl font-montserrat font-bold text-sunset-gold">5/5</span>
-              </div>
-              <p className="font-opensans text-gray-400 text-sm">Customer Rating</p>
-            </div>
-
-            <div>
-              <div className="flex items-center justify-center mb-2">
-                <Heart className="h-5 w-5 text-red-500 mr-2" />
-                <span className="text-2xl font-montserrat font-bold text-sunset-gold">1000+</span>
-              </div>
-              <p className="font-opensans text-gray-400 text-sm">Happy Travelers</p>
-            </div>
-
-            <div>
-              <div className="text-2xl font-montserrat font-bold text-sunset-gold mb-2">5+</div>
-              <p className="font-opensans text-gray-400 text-sm">Years Experience</p>
-            </div>
-
-            <div>
-              <div className="text-2xl font-montserrat font-bold text-sunset-gold mb-2">10+</div>
-              <p className="font-opensans text-gray-400 text-sm">Safari Packages</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-6">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
