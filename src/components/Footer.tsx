@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Phone,
   Mail,
   MapPin,
   ArrowRight,
-  Heart,
-  Star
+  CheckCircle,
+  AlertCircle,
 } from 'lucide-react';
 import { FacebookOutlined, InstagramOutlined, TikTokOutlined, WhatsAppOutlined } from '@ant-design/icons';
 
@@ -14,6 +14,42 @@ type FooterProps = React.HTMLAttributes<HTMLElement>;
 
 const Footer: React.FC<FooterProps> = (props) => {
   const currentYear = new Date().getFullYear();
+
+  const [email, setEmail] = useState('');
+  const [subStatus, setSubStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [subError, setSubError] = useState('');
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Basic validation
+    if (!email.trim()) {
+      setSubError('Please enter your email address.');
+      return;
+    }
+    if (!/\S+@\S+\.\S+/.test(email)) {
+      setSubError('Please enter a valid email address.');
+      return;
+    }
+
+    setSubError('');
+    setSubStatus('loading');
+
+    try {
+      // Send subscription via WhatsApp with the email captured
+      const message = `Hi! I'd like to subscribe to the Makio Tours newsletter. My email is: ${email}`;
+      const encodedMessage = encodeURIComponent(message);
+      window.open(`https://wa.me/254774156869?text=${encodedMessage}`, '_blank');
+
+      setSubStatus('success');
+      setEmail('');
+
+      setTimeout(() => setSubStatus('idle'), 5000);
+    } catch {
+      setSubStatus('error');
+      setTimeout(() => setSubStatus('idle'), 4000);
+    }
+  };
 
   const openWhatsApp = () => {
     window.open('https://wa.me/254774156869', '_blank');
@@ -42,18 +78,61 @@ const Footer: React.FC<FooterProps> = (props) => {
               and Africa travel insights.
             </p>
 
-            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-4">
+            <form
+              onSubmit={handleSubscribe}
+              className="flex flex-col sm:flex-row max-w-md mx-auto gap-4"
+              noValidate
+            >
               <input
                 type="email"
+                value={email}
+                onChange={(e) => { setEmail(e.target.value); setSubError(''); }}
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg font-opensans text-gray-900 focus:outline-none focus:ring-2 focus:ring-sunset-gold"
+                disabled={subStatus === 'loading' || subStatus === 'success'}
+                className="flex-1 px-4 py-3 rounded-lg font-opensans text-gray-900 focus:outline-none focus:ring-2 focus:ring-sunset-gold disabled:opacity-60"
               />
-              <button className="bg-sunset-gold hover:bg-yellow-500 text-gray-900 font-opensans font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group">
-                Subscribe
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <button
+                type="submit"
+                disabled={subStatus === 'loading' || subStatus === 'success'}
+                className="bg-sunset-gold hover:bg-yellow-500 text-gray-900 font-opensans font-semibold px-6 py-3 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
+              >
+                {subStatus === 'loading' ? (
+                  <>
+                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-gray-900 mr-2" />
+                    Subscribing...
+                  </>
+                ) : subStatus === 'success' ? (
+                  <>
+                    <CheckCircle className="mr-2 h-4 w-4" />
+                    Subscribed!
+                  </>
+                ) : (
+                  <>
+                    Subscribe
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </button>
-            </div>
-          </div>
+            </form>
+
+            {subError && (
+              <p className="mt-3 flex items-center justify-center text-sm font-opensans text-red-300">
+                <AlertCircle className="h-4 w-4 mr-1 flex-shrink-0" />
+                {subError}
+              </p>
+            )}
+            {subStatus === 'success' && (
+              <p className="mt-3 flex items-center justify-center text-sm font-opensans text-green-300">
+                <CheckCircle className="h-4 w-4 mr-1 flex-shrink-0" />
+                Thank you! We'll be in touch with safari updates soon.
+              </p>
+            )}
+            {subStatus === 'error' && (
+              <p className="mt-3 flex items-center justify-center text-sm font-opensans text-red-300">
+                <AlertCircle className="h-4 w-4 mr-1 flex-shrink-0" />
+                Something went wrong. Please try again.
+              </p>
+            )}          </div>
         </div>
       </div>
 
