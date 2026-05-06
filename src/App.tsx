@@ -22,11 +22,11 @@ function App() {
   return (
     <Router>
       <JsonLd />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-white w-full overflow-x-hidden">
         <PageLoader />
         <Header />
         <ScrollToTop />
-        <main>
+        <main className="w-full">
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Home />} />
