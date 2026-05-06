@@ -21,7 +21,7 @@ const packages: Package[] = [
     id: 1,
     title: "Day Trip - Nairobi National Park",
     duration: "1 Day",
-    image: "https://res.cloudinary.com/drnm7slkt/image/upload/v1756030184/Makio_21_ytes0p.jpg",
+    image: "https://res.cloudinary.com/drnm7slkt/image/upload/v1778085202/Nairobi_National_Park_ndclem.jpg",
     highlights: ["Black Rhinos", "City Skyline Backdrop", "Big Cats"],
     price: "",
     rating: 4.6,
